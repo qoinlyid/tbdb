@@ -1,0 +1,37 @@
+use-grammars = { only = [
+    "yaml",
+    "json",
+    "toml",
+    "go",
+    "gomod",
+    "gotmpl",
+    "gowork",
+] }
+
+[language-server.gopls]
+command = "gopls"
+args = ["-logfile=/tmp/gopls.log", "serve"]
+
+[language-server.gopls.config]
+staticcheck = true
+usePlaceholders = true
+completeUnimported = true
+deepCompletion = true
+
+[language-server.gopls.config.analyses]
+unusedparams = true
+shadow = true
+fieldalignment = false
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
