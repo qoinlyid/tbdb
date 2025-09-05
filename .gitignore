@@ -10,6 +10,9 @@
 
 # Test binary, built with `go test -c`
 *.test
+*.tmp
+*.txt
+*dataset.json
 
 # Code coverage profiles and other test artifacts
 *.out
@@ -17,16 +20,24 @@ coverage.*
 *.coverprofile
 profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Dependencies
+/vendor/
+vendor/
+vendor
+/Godeps/
 
 # Go workspace file
 go.work
 go.work.sum
 
 # env file
-.env
+*env*
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# IDE files
+.vscode
+.DS_Store
+.idea
+.helix/config.toml
+
+# Cache and temporary datas
+tmp/

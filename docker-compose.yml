@@ -1,0 +1,19 @@
+services:
+  qoinly-tbdb-container:
+    container_name: qoinly-tbdb-container
+    build: .
+    restart: unless-stopped
+    working_dir: /tbdb
+    volumes:
+      - ./:/tbdb
+    security_opt:
+      - "seccomp=unconfined"
+    cap_add:
+      - IPC_LOCK
+      - SYS_PTRACE
+    command: sleep infinity
+
+networks:
+  default:
+    name: ${DOCKER_NETWORK}
+    external: true
