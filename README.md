@@ -1,4 +1,4 @@
-# tbdb
+# `tbdb`
 A wrapper for TigerBeetle database client Go with enhanced interfaces for currency handling, ledger management, and financial operations. Can be used standalone or as a Qore dependency.
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/qoinlyid/tbdb)](https://goreportcard.com/report/github.com/qoinlyid/tbdb)
